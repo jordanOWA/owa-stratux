@@ -417,7 +417,7 @@ func makeOwnshipReport() bool {
 		}
 	}
 
-	myReg := "Stratux" // Default callsign.
+	myReg := "OWA" // Default callsign.
 	// Use icao2reg() results for ownship tail number, if available.
 	if len(code) == 3 {
 		uintIcao := uint32(code[0])<<16 | uint32(code[1])<<8 | uint32(code[2])
@@ -667,7 +667,7 @@ func makeFFIDMessage() []byte {
 	for i := 3; i <= 10; i++ {
 		msg[i] = 0xFF
 	}
-	devShortName := "Stratux" // Temporary. Will be populated in the future with other names.
+	devShortName := "OWA" // Temporary. Will be populated in the future with other names.
 	if len(devShortName) > 8 {
 		devShortName = devShortName[:8] // 8 chars.
 	}
@@ -1276,7 +1276,7 @@ func readWiFiUserSettings() {
 	defer fd.Close()
 
 	// Default values
-	globalSettings.WiFiSSID = "stratux"
+	globalSettings.WiFiSSID = "OWA"
 	globalSettings.WiFiChannel = 8
 	globalSettings.WiFiSecurityEnabled = false
 
