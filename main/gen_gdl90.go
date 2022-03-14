@@ -667,7 +667,7 @@ func makeFFIDMessage() []byte {
 	for i := 3; i <= 10; i++ {
 		msg[i] = 0xFF
 	}
-	devShortName := "OWA" // Temporary. Will be populated in the future with other names.
+	devShortName := "OWA" // Adapted for OWA purposes
 	if len(devShortName) > 8 {
 		devShortName = devShortName[:8] // 8 chars.
 	}
